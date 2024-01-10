@@ -1,0 +1,230 @@
+/* FILEPATH: /C:/Users/guiga/OneDrive/Área de Trabalho/Docs/styles.css */
+
+/* Estilos para a documentação */
+
+/* Estilo do corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: auto 0px;
+}
+
+.background {
+  background-color: #333;
+}
+
+/* Estilo do cabeçalho */
+header {
+  background-color: #00c5ff;
+  color: #000;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Estilo do título da página */
+h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Estilo das tabelas */
+table {
+  width: auto;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #000000;
+}
+
+tr {
+  background-color: #ffffff;
+}
+
+.titleh1 {
+  font-size: 32px;
+  margin: 0;
+  color: #000000;
+}
+
+.subtitle {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.subtitle:hover {
+  color: #00c5ff;
+  position: relative;
+}
+
+li {
+  color: #00c5ff;
+}
+
+li .subtitle:hover::before {
+  content: "";
+  position: absolute;
+  right: -10px; /* Changed from right to left */
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 6px solid transparent; /* Increased from 5px to 7px */
+  border-bottom: 6px solid transparent; /* Increased from 5px to 7px */
+  border-right: 6px solid #00c5ff; /* Changed from border-left to border-right and increased from 5px to 7px */
+}
+
+/* Estilo das seções */
+section {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #eeeeee;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: underline;
+  margin: 0;
+  color: #000000;
+}
+
+.subtitle {
+  font-size: 14px;
+  margin: 0;
+  color: #000000;
+}
+
+.container-top {
+  --offset: 100px;
+  --fade: 80px;
+
+  display: flex;
+  align-items: flex-end;
+  width: 60px;
+  justify-self: end;
+  justify-content: flex-end;
+  -webkit-mask: linear-gradient(
+    #0000 calc(100vh + var(--offset)),
+    #000 calc(100vh + var(--offset) + var(--fade))
+  );
+  mask: linear-gradient(
+    #0000 calc(100vh + var(--offset)),
+    #000 calc(100vh + var(--offset) + var(--fade))
+  );
+}
+
+.container-body {
+  margin-left: 20px;
+}
+
+.top {
+  position: sticky;
+  bottom: 20px;
+  margin-right: 10px;
+
+  /* visual styling */
+  width: 100%;
+  aspect-ratio: 1;
+  background: #00c5ff;
+  border-radius: 10px;
+}
+.top:before {
+  content: "";
+  position: absolute;
+  inset: 30%;
+  transform: translateY(20%) rotate(-45deg);
+  border-top: 5px solid #fff;
+  border-right: 5px solid #fff;
+}
+
+.sidebar {
+  position: sticky;
+  top: 10px;
+}
+
+.bodyText {
+  color: #000000;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+.code-image {
+  width: 30%;
+  height: auto;
+}
+
+.post, .get {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.separator {
+  border-bottom: 2px solid transparent; /* Increased from 5px to 7px */
+  width: auto;
+  padding-right: 8rem;
+  padding-right: 24rem;
+  height: 1px;
+  background: #808080;
+  background-color: #808080;
+  border-radius: 9999px;
+}
+
+.navbar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 200px;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-left: 1px solid #808080;
+}
+
+.pageNav {
+  color: #fff;
+  font-size: 24;
+  text-decoration: underline #00c5ff 2px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.titleNav {
+  color: #fff;
+  font-size: 18;
+  text-decoration: none;
+  text-align: left;
+}
+
+.subtitleNav {
+  color: #fff;
+  font-size: 12;
+  text-decoration: none;
+  text-align: left;
+}
+
+.pageNav:hover,
+.titleNav:hover,
+.subtitleNav:hover {
+  color: #00c5ff;
+  position: relative;
+}
+
+footer {
+  margin-left: 20px;
+}

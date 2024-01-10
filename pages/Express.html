@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Documentação do Servidor Express</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="background">
+
+    <div class="navbar">
+      <a href="../index.html" class="pageNav">Home</a>
+      <a href="../pages/ReactNative.html" class="pageNav">React Native</a>
+      <ul>
+        <li><a href="../pages/ReactNative.html#introducao" class="titleNav">Introdução</a></li>
+        <li>
+          <a href="#telas" class="titleNav">Telas</a>
+          <ul>
+            <li><a href="../pages/ReactNative.html#tela1" class="subtitleNav">Login</a></li>
+            <li><a href="../pages/ReactNative.html#tela2" class="subtitleNav">Perfil</a></li>
+            <li><a href="../pages/ReactNative.html#tela3" class="subtitleNav">Seleção de família</a></li>
+            <li><a href="../pages/ReactNative.html#tela4" class="subtitleNav">Seleção de modelo</a></li>
+            <li><a href="../pages/ReactNative.html#tela5" class="subtitleNav">Ações</a></li>
+            <div class="separatorNav"></div>
+            <ul>
+              <li><a href="../pages/ReactNative.html#tela5.1" class="subtitleNav">Interno</a></li>
+              <li><a href="../pages/ReactNative.html#tela5.2" class="subtitleNav">Externo</a></li>
+              <li><a href="../pages/ReactNative.html#tela5.3" class="subtitleNav">Estúdio</a></li>
+            </ul>
+          </ul>
+        </li>
+        <li><a href="../pages/ReactNative.html#api" class="titleNav">Bibliotecas externas usadas</a></li>
+      </ul>
+      <a href="../pages/Express.html" class="pageNav">Express</a>
+      <ul>
+        <li><a href="../pages/Express.html#post" class="titleNav">Métodos POST</a></li>
+        <ul>
+          <li><a href="../pages/Express.html#app" class="subtitleNav">/app</a></li>
+          <li><a href="../pages/Express.html#check" class="subtitleNav">/check</a></li>
+          <li><a href="../pages/Express.html#teleport" class="subtitleNav">/teleport</a></li>
+        </ul>
+      </ul>
+      <ul>
+        <li><a href="../pages/Express.html#get" class="titleNav">Métodos GET</a></li>
+        <ul>
+          <li><a href="../pages/Express.html#reset" class="subtitleNav">/reset</a></li>
+          <li><a href="../pages/Express.html#checkTeleport" class="subtitleNav">/checkTeleport</a></li>
+          <li><a href="../pages/Express.html#ping" class="subtitleNav">/ping</a></li>
+        </ul>
+      </ul>
+    </div>
+    
+    <header>
+      <h1>Documentação do Servidor Express</h1>
+    </header>
+
+    <div class="container-body">
+      <div class="container-content">
+        <div class="content">
+          <div class="post">
+            <h1 class="titleh1">Métodos POST</h1>
+            <br />
+            <div class="separator"></div>
+            <section>
+              <h2 id="app">/app</h2>
+              <p>
+                Recebe unicamente as requisições do aplicativo e grava no banco
+                de dados o estado
+              </p>
+              <table>
+                <tr>
+                  <th>Parâmetro</th>
+                  <th>Descrição</th>
+                </tr>
+                <tr>
+                  <td>codeReq</td>
+                  <td>Identificador de ação</td>
+                </tr>
+                <tr>
+                  <td>uid</td>
+                  <td>Identificador único do usuário</td>
+                </tr>
+              </table>
+              <p>Exemplo de request axios:</p>
+              <img class="code-image" src="../assets/express/images/app.png">
+
+            </section>
+            <div class="separator"></div>
+            <section>
+              <h2 id="check">/check</h2>
+              <p>
+                Endpoint consumido apenas pela unreal engine para poder
+                verificar os status de pendente do banco de dados
+              </p>
+              <table>
+                <tr>
+                  <th>Parâmetro</th>
+                  <th>Descrição</th>
+                </tr>
+                <tr>
+                  <td>uid</td>
+                  <td>Identificador único do usuário</td>
+                </tr>
+              </table>
+              <p>Exemplo de request axios:</p>
+              <img class="code-image" src="../assets/express/images/check.png">
+
+            </section>
+            <div class="separator"></div>
+            <section>
+              <h2 id="teleport">/teleport</h2>
+              <p>
+                Endpoint usado pelo aplicativo ao trocar de <a href="../pages/ReactNative.html#tela5">aba</a>
+                para enviar a localização do usuário para o banco de dados
+              </p>
+              <table>
+                <tr>
+                  <th>Parâmetro</th>
+                  <th>Descrição</th>
+                </tr>
+                <tr>
+                  <td>uid</td>
+                  <td>Identificador único do usuário</td>
+                </tr>
+              </table>
+              <p>Exemplo de request axios:</p>
+              <img class="code-image" src="../assets/express/images/teleport.png">
+            </section>
+          </div>
+          <br />
+          <br />
+          <div class="get">
+            <h1 class="titleh1">Métodos GET</h1>
+            <br /> 
+            <div class="separator"></div>
+            <section>
+              <h2 id="reset">/reset</h2>
+              <p>
+                Endpoint usado para resetar o banco de dados, usado apenas para
+                testes
+              </p>
+              <p>Exemplo de request axios:</p>
+              <img class="code-image" src="../assets/express/images/reset.png">
+            </section>
+            <div class="separator"></div>
+            <section>
+              <h2 id="checkTeleport">/checkTeleport</h2>
+              <p>
+                Endpoint usado para verificar os teleportes pendentes no banco
+                de dados
+              </p>
+              <p>Exemplo de request axios:</p>
+              <img class="code-image" src="../assets/express/images/checkTeleport.png">
+            </section>
+            <div class="separator"></div>
+            <section>
+              <h2 id="ping">/ping</h2>
+              <p>
+                Endpoint usado para manter o servidor ativo, devido ao host necessitar de atividade
+              </p>
+              <p>Exemplo de request axios:</p>
+              <img class="code-image" src="../assets/express/images/ping.png">
+            </section>
+
+          </div>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <footer>
+        <p class="footerText">&copy; Agência DADS de Publicidade</p>
+      </footer>
+    </div>
+  </div>
+
+  <div class="container-top">
+    <a href="#" class="top"></a>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Documentação do Aplicativo React Native</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="background">
+
+    <div class="navbar">
+      <a href="../index.html" class="pageNav">Home</a>
+      <a href="../pages/ReactNative.html" class="pageNav">React Native</a>
+      <ul>
+        <li><a href="../pages/ReactNative.html#introducao" class="titleNav">Introdução</a></li>
+        <li>
+          <a href="#telas" class="titleNav">Telas</a>
+          <ul>
+            <li><a href="../pages/ReactNative.html#tela1" class="subtitleNav">Login</a></li>
+            <li><a href="../pages/ReactNative.html#tela2" class="subtitleNav">Perfil</a></li>
+            <li><a href="../pages/ReactNative.html#tela3" class="subtitleNav">Seleção de família</a></li>
+            <li><a href="../pages/ReactNative.html#tela4" class="subtitleNav">Seleção de modelo</a></li>
+            <li><a href="../pages/ReactNative.html#tela5" class="subtitleNav">Ações</a></li>
+            <div class="separatorNav"></div>
+            <ul>
+              <li><a href="../pages/ReactNative.html#tela5.1" class="subtitleNav">Interno</a></li>
+              <li><a href="../pages/ReactNative.html#tela5.2" class="subtitleNav">Externo</a></li>
+              <li><a href="../pages/ReactNative.html#tela5.3" class="subtitleNav">Estúdio</a></li>
+            </ul>
+          </ul>
+        </li>
+        <li><a href="../pages/ReactNative.html#api" class="titleNav">Bibliotecas externas usadas</a></li>
+      </ul>
+      <a href="../pages/Express.html" class="pageNav">Express</a>
+      <ul>
+        <li><a href="../pages/Express.html#post" class="titleNav">Métodos POST</a></li>
+        <ul>
+          <li><a href="../pages/Express.html#app" class="subtitleNav">/app</a></li>
+          <li><a href="../pages/Express.html#check" class="subtitleNav">/check</a></li>
+          <li><a href="../pages/Express.html#teleport" class="subtitleNav">/teleport</a></li>
+        </ul>
+      </ul>
+      <ul>
+        <li><a href="../pages/Express.html#get" class="titleNav">Métodos GET</a></li>
+        <ul>
+          <li><a href="../pages/Express.html#reset" class="subtitleNav">/reset</a></li>
+          <li><a href="../pages/Express.html#checkTeleport" class="subtitleNav">/checkTeleport</a></li>
+          <li><a href="../pages/Express.html#ping" class="subtitleNav">/ping</a></li>
+        </ul>
+      </ul>
+    </div>
+    
+  <header>
+    <h1>Documentação do Aplicativo React Native</h1>
+  </header>
+  <div class="container-body">
+      
+      <section id="introducao">
+        <!-- Conteúdo da seção Introdução -->
+        <h2 class="bodyText">Introdução</h2>
+        <p class="bodyText">O aplicativo é usado como um painel de controle, dentro do aplicativo o usuário terá a possibilidade de
+          comandar as ações dentro do jogo da Unreal Engine 5 por meio de requests HTTP</p>
+      </section>
+
+      <section id="telas">
+        <!-- Conteúdo da seção Telas -->
+        <section id="tela1">
+          <!-- Conteúdo da subseção Login -->
+          <h2 class="bodyText">Login</h2>
+          <p class="bodyText">
+            Esta tela é a primeira a ser exibida ao usuário.
+            </br>
+            Nela, o usuário pode
+            fazer login <del>ou se cadastrar</del>.
+          </p>
+        </section>
+        <section id="tela2">
+          <!-- Conteúdo da subseção Perfil -->
+          <h2 class="bodyText">Perfil</h2>
+          <p class="bodyText">
+            Acessível atraves do primeiro ícone do rodapé.
+            </br>
+            Nessa tela é possível visualizar e editar as informações do concessionário como foto de perfil e telefone.
+          </p>
+        </section>
+        <section id="tela3">
+          <!-- Conteúdo da subseção Seleção de família -->
+          <h2 class="bodyText">Seleção de família</h2>
+          <p class="bodyText">
+            Acessível atraves do segundo ícone do rodapé e também página inicial após o login.
+            </br>
+            Aqui o usuário pode
+            selecionar a família de veículos que deseja No momento apenas a
+            família Arocs está disponível.
+            </br>
+            Ao clicar em outras famílias aparecerá
+            um aviso de que a família selecionada ainda não está disponível.
+            </br>
+            Ao clicar em uma família, o usuário é redirecionado para a tela de seleção de modelo.
+          </p>
+        </section>
+        <section id="tela4">
+          <!-- Conteúdo da subseção Seleção de modelo -->
+          <h2 class="bodyText">Seleção de modelo</h2>
+          <p class="bodyText">
+            Acessível após selecionar a família na tela anterior.
+            </br>
+            Nessa tela, o usuário poderá selecionar entre os modelos disponíveis das famílias.
+            No presente momento, todos levam para o mesmo lugar.
+            </br>
+            Ao clicar em um modelo, o usuário é redirecionado para a tela de ações.
+          </p>
+        </section>
+        <section id="tela5">
+          <!-- Conteúdo da subseção Ações -->
+          <h2 class="bodyText">Ações</h2>
+          <section id="tela5.1">
+            <!-- Conteúdo da subseção Interno -->
+            <h3 class="bodyText">Interno</h3>
+            <p class="bodyText">
+              Acessível atraves da barra de navegação superior.
+              Ao entrar nessa tela, o usuário é teleportado para a parte interna do caminhão por meio de um request
+              http.
+              </br>
+              No momento, as opções são apenas visuais, ao clicar em qualquer botão não ocorrerá nenhuma ação.
+            </p>
+          </section>
+          <section id="tela5.2">
+            <!-- Conteúdo da subseção Externo -->
+            <h3 class="bodyText">Externo</h3>
+            <p class="bodyText">
+              Acessível atraves da barra de navegação superior.
+              Ao entrar nessa tela, o usuário é teleportado para a parte externa do caminhão por meio de um request
+              http.
+              </br>
+              Todos os botões são funcionais, separados por categorias.
+              </br>
+            </p>
+          </section>
+          <section id="tela5.3">
+            <!-- Conteúdo da subseção Estúdio -->
+            <h3 class="bodyText">Estúdio</h3>
+            <p class="bodyText">
+              Acessível atraves da barra de navegação superior.
+              Ao entrar nessa tela, o usuário é teleportado para o estúdio por meio de um request http.
+              </br>
+              No momento, as opções são apenas visuais, ao clicar em qualquer botão não ocorrerá nenhuma ação.
+            </p>
+          </section>
+        </section>
+      </section>
+
+      <section id="api">
+        <!-- Conteúdo da seção Bibliotecas externas usadas -->
+        <h2 class="bodyText">Bibliotecas externas usadas</h2>
+        <p class="listText">
+        <ul>
+          <li><a href="https://axios-http.com/" class="subtitle">Axios</a></li>
+          <li><a href="https://reactnavigation.org/" class="subtitle">React Navigation</a></li>
+          <li><a href="https://rnfirebase.io" class="subtitle">React Native Firebase</a></li>
+          <li><a href="https://github.com/oblador/react-native-animatable" class="subtitle">React Native Animatable</a></li>
+          <li><a href="https://github.com/react-native-image-picker/react-native-image-picker" class="subtitle">React Native Image
+              Picker</a></li>
+          <li><a href="https://github.com/akinncar/react-native-mask-text" class="subtitle">React Native Mask Text</a></li>
+          <li><a href="https://github.com/callstack/react-native-pager-view" class="subtitle">React Native Pager View</a></li>
+          <li><a href="https://github.com/th3rdwave/react-native-safe-area-context" class="subtitle">React Native Safe Area Context</a>
+          </li>
+          <li><a href="https://github.com/oblador/react-native-vector-icons" class="subtitle">React Native Vector Icons</a></li>
+        </ul>
+        </p>
+      </section>
+  </div>
+  </div>
+
+  <div class="container-top">
+    <a href="#" class="top"></a>
+  </div>
+  <footer>
+    <p class="footerText">&copy; Agência DADS de Publicidade</p>
+  </footer>
+</body>
+
+</html>
